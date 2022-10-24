@@ -15,23 +15,36 @@
     <!------------------Heading  ------------------>
     <div class="jumbotron jumbotron-fluid bg-dark bg-gradient">
         <div class="container">
-            <h1 class="display-4 text-center text-white"><strong>5-Day Weather Forecast</strong></h1>
+            <h1 class="display-4 text-center text-white"><strong>Weather Dashboard</strong></h1>
         </div>
     </div>
     <!--------------------------------------------->
 
     <!-- Main Container -->
-    <div class="container m-0">
+<div class="container">
+<!-- Search Bar & Search History -->
+    <div class="row">
+        <div class="col-4 border border-dark bg-light">
+                <!-- Search Bar -->
+                <form class="text-center">
+                    <label for="searchbar" class="form-label mt-3">Search a city here!</label>
+                    <input type="searchbar" id="searchbar" placeholder="Tokyo" class="form-control">
+                    <button type="button" class="btn btn-dark  btn-lg mt-4 mb-2" >Search City</button>
+                </form>
+                    <!---------------->
+                    <hr />
+                <form id="search-history"></form>
+        </div>
+        <div class="col-8">
+            <div class="row">
+                <div class="col-12">
 
-        <!-- Left side container -->
-        <div class="row justify-content-start">
-            <div class="col-4 border border-dark me-3">
-                <p class="text-center ">Search a city here!</p>
+                </div>
             </div>
+
         </div>
     </div>
-
-
+</div>
 
 
 <!-- links for jquery and other pluggins for bootstrap --------------------->
