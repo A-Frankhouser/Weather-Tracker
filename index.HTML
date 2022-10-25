@@ -20,30 +20,54 @@
     </div>
     <!--------------------------------------------->
 
-    <!-- Main Container -->
-<div class="container">
 <!-- Search Bar & Search History -->
     <div class="row">
         <div class="col-4 border border-dark bg-light">
                 <!-- Search Bar -->
                 <form class="text-center">
                     <label for="searchbar" class="form-label mt-3">Search a city here!</label>
-                    <input type="searchbar" id="searchbar" placeholder="Tokyo" class="form-control">
+                    <input type="searchbar" id="searchbar" placeholder="Tokyo" class="form-control text-center">
                     <button type="button" class="btn btn-dark  btn-lg mt-4 mb-2" >Search City</button>
                 </form>
                     <!---------------->
                     <hr />
+                    <!-- Search History -->
+                <p class="text-center fw-light">Recent Searches:</p>
                 <form id="search-history"></form>
         </div>
-        <div class="col-8">
+
+        <div class="col-8 px-5">
             <div class="row">
-                <div class="col-12">
-
+                <div class="col-12 border border-dark">
+                    <h1 class="city">Woodstock<span id="currentdate"></span></h1>
+                        <ul >
+                            <li id="temperature">Temperature:<span id="current-temp"></span></li>
+                            <li id="wind">Wind:<span id="current-wind"></span></li>
+                            <li id="humidity">Humidity:<span id="current-humididty"></span></li>
+                        </ul>
                 </div>
-            </div>
 
+                <!-- 5-day forecast header -->
+                <div class="col-12 mt-4 mb-4">
+                    <h4>5-Day Forecast:</h4>
+                </div>
+                <!--------------------------->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title" id="day1date">Day1</h5>
+                                <img class="" id="weathericon">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item" id="temperature">Temperature:</li>
+                                    <li class="list-group-item" id="wind-day1">Wind:</li>
+                                    <li class="list-group-item" id="humidity-day1">Humidity:</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+            </div>
         </div>
-    </div>
 </div>
 
 
