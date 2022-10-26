@@ -1,6 +1,4 @@
-// key for Open Weather
-// APIKey = "417480d7c05aefc18c93459468066af6"
-// ------------------------------------------------
+
 
 let weather = {
     "apiKey": "417480d7c05aefc18c93459468066af6",
@@ -24,5 +22,17 @@ let weather = {
         document.querySelector(".current-temp").innerText = temp + " ℉";
         document.querySelector(".current-wind").innerText = speed + " mph";
         document.querySelector(".current-humidity").innerText = humidity + "%";
+    },
+
+    // Gets the text input from the search bar----------------------------
+    search: function () {
+        this.fetchWeather(document.querySelector("#searchbar").value);
     }
-}
+    //--------------------------------------------------------------------
+};
+
+// Event Listener for the search button---------------------------------------
+document.querySelector("#searchbttn").addEventListener("click", function () {
+    weather.search();
+//----------------------------------------------------------------------------
+});
