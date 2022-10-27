@@ -1,4 +1,13 @@
+const currentDateElement = document.querySelector(".currentDate");
 
+// setInterval(() => {
+//     const time = new Date();
+//     const month = time.getMonth();
+//     const day = time.getDay();
+//     const date = time.getDate();
+
+//     currentDateElement.innerHTML = "(" + month + "/" + day + "/" + date + ")";
+// }, 1000);
 
 let weather = {
     "apiKey": "417480d7c05aefc18c93459468066af6",
@@ -29,6 +38,7 @@ let weather = {
         this.fetchWeather(document.querySelector("#searchbar").value);
     }
     //--------------------------------------------------------------------
+    
 };
 
 // Event Listener for the search button---------------------------------------
@@ -36,3 +46,20 @@ document.querySelector("#searchbttn").addEventListener("click", function () {
     weather.search();
 //----------------------------------------------------------------------------
 });
+
+// Trying to get the enter button to search Also------------------------------------------
+// document.querySelector("#searchbar").addEventListener("keyup", function (event) {
+//     if (event.key = "Enter") {
+//         weather.search();
+//         event.preventDefault()
+//     }
+// })
+//----------------------------------------------------------------------------------------
+
+function fiveDayForecast() {
+    
+    navigator.geolocation.getCurrentPosition((Success) => {
+        let {latitude, longitute} = success.coords;
+
+    })
+}
